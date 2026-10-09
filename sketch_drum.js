@@ -29,7 +29,7 @@ async function mousePressed() {
     // new test
     await userStartAudio();
     console.log("audio state:", getAudioContext().state);
-    console.log("is loaded:", beat.isLoaded());
+    //console.log("is loaded:", beat.isLoaded());
     
     if (beat.isPlaying()) {
         console.log("beat playing");
@@ -38,6 +38,7 @@ async function mousePressed() {
         console.log("beat not playing");
         beat.loop();
     }
+    console.log(beat);
 }
 
 function draw() {
