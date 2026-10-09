@@ -2,6 +2,7 @@ let beat, analyzer;
 
 function preload() {
     beat = loadSound('beat.mp3');
+    console.log("PRELOAD RAN");
 }
 
 function setup() {
