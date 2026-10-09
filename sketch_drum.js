@@ -10,7 +10,7 @@ function setup() {
     
     // create a new Amplitude analyzer
     analyzer = new p5.Amplitude();
-    analyzer.setInput(beat);
+    //analyzer.setInput(beat);
 }
 
 function mousePressed() {
