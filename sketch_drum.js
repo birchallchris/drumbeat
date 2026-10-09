@@ -41,6 +41,7 @@ async function mousePressed() {
     }
     console.log(beat);
     console.log(Object.getOwnPropertyNames(Object.getPrototypeOf(beat)));
+    console.log(beat.duration());
 }
 
 function draw() {
