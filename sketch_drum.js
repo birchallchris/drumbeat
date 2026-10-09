@@ -6,12 +6,13 @@ function preload() {
 }
 
 function setup() {
+    console.log("SETUP");
     let myCanvas = createCanvas(600, 400);
     myCanvas.parent('myContainer');
     
     // create a new Amplitude analyzer
     analyzer = new p5.Amplitude();
-    //analyzer.setInput(beat);
+    analyzer.setInput(beat);
 }
 
 function mousePressed() {
