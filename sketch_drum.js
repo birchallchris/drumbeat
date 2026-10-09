@@ -1,10 +1,19 @@
 let beat, analyzer;
 
-function preload() {
+/*function preload() {
     beat = loadSound('beat.mp3');
     console.log("PRELOAD RAN");
-}
+}*/
+async function setup() {
+    console.log("SETUP");
+    let myCanvas = createCanvas(600, 400);
+    myCanvas.parent('myContainer');
 
+    beat = await loadSound('beat.mp3');
+
+    analyzer = new p5.Amplitude();
+}
+/*
 function setup() {
     console.log("SETUP");
     let myCanvas = createCanvas(600, 400);
@@ -13,7 +22,7 @@ function setup() {
     // create a new Amplitude analyzer
     analyzer = new p5.Amplitude();
     analyzer.setInput(beat);
-}
+}*/
 
 function mousePressed() {
     if (beat.isPlaying()) {
