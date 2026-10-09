@@ -25,11 +25,12 @@ function setup() {
 }*/
 
 async function mousePressed() {
+
     console.log("mouse pressed");
-    // new test
-    await userStartAudio();
-    console.log("audio state:", getAudioContext().state);
-    //console.log("is loaded:", beat.isLoaded());
+    const ctx = getAudioContext();
+    console.log("before:", ctx.state);
+    await ctx.resume();
+    console.log("after:", ctx.state);
     
     if (beat.isPlaying()) {
         console.log("beat playing");
@@ -39,6 +40,7 @@ async function mousePressed() {
         beat.loop();
     }
     console.log(beat);
+    console.log(Object.getOwnPropertyNames(Object.getPrototypeOf(beat)));
 }
 
 function draw() {
