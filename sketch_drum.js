@@ -37,7 +37,7 @@ async function mousePressed() {
         beat.stop();
     } else {
         console.log("beat not playing");
-        beat.loop();
+        beat.start();
     }
     console.log(beat);
     console.log(Object.getOwnPropertyNames(Object.getPrototypeOf(beat)));
