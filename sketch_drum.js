@@ -27,7 +27,7 @@ function setup() {
 async function mousePressed() {
     console.log("mouse pressed");
     // new test
-    await userStartAudio();
+    //await userStartAudio();
     
     if (beat.isPlaying()) {
         beat.stop();
