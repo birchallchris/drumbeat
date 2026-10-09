@@ -2,11 +2,9 @@ let beat, analyzer;
 
 function preload() {
     beat = loadSound('beat.mp3');
-    console.log("PRELOAD RAN");
 }
 
 function setup() {
-    console.log("SETUP");
     let myCanvas = createCanvas(600, 400);
     myCanvas.parent('myContainer');
     
@@ -16,7 +14,6 @@ function setup() {
 }
 
 function mousePressed() {
-    console.log("mouse pressed");
     if (beat.isPlaying()) {
         console.log("beat playing");
         beat.stop();
