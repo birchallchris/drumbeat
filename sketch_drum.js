@@ -25,7 +25,7 @@ function setup() {
 }*/
 
 async function mousePressed() {
-
+    console.log("mouse pressed");
     // new test
     await userStartAudio();
     
