@@ -12,6 +12,7 @@ async function setup() {
     beat = await loadSound('beat.mp3');
 
     analyzer = new p5.Amplitude();
+    analyzer.setInput(beat);
 }
 /*
 function setup() {
