@@ -15,10 +15,8 @@ function setup() {
 
 function mousePressed() {
     if (beat.isPlaying()) {
-        console.log("beat playing");
         beat.stop();
     } else {
-        console.log("beat not playing");
         beat.loop();
     }
 }
@@ -31,7 +29,6 @@ function draw() {
     // Get the average (root mean square) amplitude
     let rms = 0
     if (analyzer.getLevel()){
-        console.log("level got");
         rms = analyzer.getLevel();
     }
     
