@@ -24,7 +24,11 @@ function setup() {
     analyzer.setInput(beat);
 }*/
 
-function mousePressed() {
+async function mousePressed() {
+
+    // new test
+    await userStartAudio();
+    
     if (beat.isPlaying()) {
         beat.stop();
     } else {
@@ -40,6 +44,7 @@ function draw() {
     // Get the average (root mean square) amplitude
     let rms = 0
     if (analyzer.getLevel()){
+        console.log("level got");
         rms = analyzer.getLevel();
     }
     
